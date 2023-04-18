@@ -134,3 +134,51 @@ public class Main {
   }
 }
 ```
+
+## CHARACTER INPUT/OUTPUT
+
+### Reading and Writing Characters
+
+* As pointed out earlier, subclasses of Reader and Writer implement streams that can handle characters
+* The two subclasses used for handling characters in file are:
+    - FileReader
+    - FileWriter
+* Remember, while opening a file, we can pass either file name or File object during the creation of objects of the above classes.
+
+### Reader Class example
+Count total number of spaces in the file
+```java
+// Import the required Java classes for file input and exception handling
+import java.io.FileReader;
+import java.io.IOException;
+
+// Define a class called Main
+public class Main {
+  
+  // Define the main method and indicate that it may throw an IOException
+  public static void main(String[] args) throws IOException {
+    
+    // Declare a variable of type FileReader and initialize it with the input file "testFile-one.txt"
+    FileReader in;
+    in = new FileReader("/home/jawabreh/Desktop/Java/testFile-one.txt");
+    
+    // Declare variables to keep track of the total number of characters and white spaces
+    int ch, total, spaces;
+    spaces = 0;
+    
+    // Use a for loop to read each character of the input file
+    for (total = 0; (ch = in.read()) != -1; total++) {
+      
+      // Check if the current character is a white space
+      if (Character.isWhitespace((char) ch))
+        spaces++; // If so, increment the counter for white spaces
+    }
+    
+    // Print the total number of white spaces to the console
+    System.out.println("Total number of white spaces is: " + spaces);
+    
+    // Close the input stream to release any system resources
+    in.close();
+  }
+}
+```
