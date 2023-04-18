@@ -58,7 +58,8 @@ This repository contains Java code examples that demonstrate how to work with st
 * FileInputStream
 * FileOutputStream
 
-Example: Count total number of bytes in the file
+### Byte Input Stream - example
+Count total number of bytes in the file
 ```java
 // Import the required Java classes for input and output
 import java.io.*;
@@ -93,4 +94,25 @@ class Main {
     // Close the input stream to release any system resources
     in.close();
   }}
+```
+### Byte Output Stream - example
+Write Jerusalem , Qudus into file using FileOutputStram
+```java
+import java.io.FileOutputStream;
+import java.io.IOException;
+public class Main {
+    public static void main(String[] args) {
+
+        byte cities[] = {'J','E','R','U','S','A','E','M',
+                '\n','Q','U','D','U','S',};
+        FileOutputStream out;
+        try {
+            out = new FileOutputStream("Cities.txt");
+            out.write(cities);
+            System.out.println("DONE");
+            out.close();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }}}
 ```
