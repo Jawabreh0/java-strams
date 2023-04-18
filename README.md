@@ -60,17 +60,37 @@ This repository contains Java code examples that demonstrate how to work with st
 
 Example: Count total number of bytes in the file
 ```java
+// Import the required Java classes for input and output
 import java.io.*;
-class CountBytes {
-public static void main(String[] args) throws FileNotFoundException, IOException
-{
-FileInputStream in;
-in = new FileInputStream(“InFile.txt”);
-int total = 0;
-while (in.read() != -1)
-total++;
-System.out.println(total + “ bytes”);
-in.close();
-}
-}
+
+// Define a class called CountBytes
+// Import the required Java classes for input and output
+import java.io.*;
+
+// Define a class called Main
+class Main {
+  
+  // Define the main method with exception handling
+  public static void main(String[] args) throws FileNotFoundException, IOException {
+  
+    // Declare a variable of type FileInputStream
+    FileInputStream in;
+    
+    // Initialize the FileInputStream object with the input file "/home/jawabreh/Desktop/Java/testFile-one.txt"
+    in = new FileInputStream("/home/jawabreh/Desktop/Java/testFile-one.txt");
+    
+    // Declare and initialize a variable called "total" to count the number of bytes in the input file
+    int total = 0;
+    
+    // Read the input file byte by byte until the end of the file is reached
+    while (in.read() != -1) {
+      total++;
+    }
+    
+    // Print the total number of bytes in the input file to the console
+    System.out.println("The total number of bytes is :" + total);
+    
+    // Close the input stream to release any system resources
+    in.close();
+  }}
 ```
