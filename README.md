@@ -182,3 +182,77 @@ public class Main {
   }
 }
 ```
+### Reader Class example
+Read File Content using FileReader (Reader Class)
+here there are two solutions, first by providing file as object, second by directly the file name as string
+
+Solution using file object
+```java
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        FileReader in = null;
+
+        try {
+            in = new FileReader("/home/jawabreh/Desktop/Java/testFile-one.txt");
+            int data;
+            while ((data = in.read()) != -1){
+                System.out.println((char) data);
+            }
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
+
+By providing file as string 
+```java
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class asString {
+    public static void main(String[] args) {
+        String fileName = "/home/jawabreh/Desktop/Java/testFile-one.txt";
+        FileReader readFile = null;
+
+        try {
+            readFile = new FileReader(fileName);
+            int data;
+            while ((data = readFile.read()) != -1) {
+                System.out.println((char) data);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (readFile != null) {
+                    readFile.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
