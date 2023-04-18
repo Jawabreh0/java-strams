@@ -98,21 +98,39 @@ class Main {
 ### Byte Output Stream - example
 Write Jerusalem , Qudus into file using FileOutputStram
 ```java
+// Import the required Java classes for file output and exception handling
 import java.io.FileOutputStream;
 import java.io.IOException;
-public class Main {
-    public static void main(String[] args) {
 
-        byte cities[] = {'J','E','R','U','S','A','E','M',
-                '\n','Q','U','D','U','S',};
-        FileOutputStream out;
-        try {
-            out = new FileOutputStream("Cities.txt");
-            out.write(cities);
-            System.out.println("DONE");
-            out.close();
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }}}
+// Define a class called Main
+public class Main {
+  
+  // Define the main method
+  public static void main(String[] args) {
+    
+    // Declare an array of bytes representing the names of two cities
+    byte cities[] = {'J', 'E', 'R', 'U', 'S', 'A', 'E', 'M', '\n', 'Q', 'U', 'D', 'U', 'S'};
+    
+    // Declare a variable of type FileOutputStream
+    FileOutputStream out;
+    
+    try {
+      // Initialize the FileOutputStream object with the output file "Cities.txt"
+      out = new FileOutputStream("Cities.txt");
+      
+      // Write the byte array "cities" to the output file
+      out.write(cities);
+      
+      // Print a message to the console indicating that the writing operation is complete
+      System.out.println("DONE");
+      
+      // Close the output stream to release any system resources
+      out.close();
+    }
+    // Catch any IO exceptions that may be thrown by the FileOutputStream object
+    catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+}
 ```
