@@ -147,7 +147,7 @@ public class Main {
 
 ### Reader Class (FileReader)
 
-### Reader Class example
+#### Reader Class example
 Count total number of spaces in the file
 ```java
 // Import the required Java classes for file input and exception handling
@@ -259,3 +259,39 @@ public class asString {
 }
 ```
 ### Writer Class (FileWriter)
+
+* FileWriter is a character stream writer
+* 
+####Example of writing file using FileWriter
+
+```java
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("createdFile");
+
+        FileWriter fr = nulll;
+
+        try{
+            fr = new FileWriter(file);
+            fr.write('A');
+            fr.write(67);
+            fr.write("456");
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                fr.close();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+}
+```
