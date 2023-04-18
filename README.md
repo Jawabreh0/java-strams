@@ -50,3 +50,27 @@ This repository contains Java code examples that demonstrate how to work with st
  * canRead()
  * canWrite()
  
+ ## BYTE INPUT/OUTPUT
+ 
+ ### Reading/Writing Bytes
+ 
+ As most file systems use only 8-bit bytes, Java supports number of classes that can handle bytes. The two most commonly used classes for handling bytes are:
+* FileInputStream
+* FileOutputStream
+
+Example: Count total number of bytes in the file
+```java
+import java.io.*;
+class CountBytes {
+public static void main(String[] args) throws FileNotFoundException, IOException
+{
+FileInputStream in;
+in = new FileInputStream(“InFile.txt”);
+int total = 0;
+while (in.read() != -1)
+total++;
+System.out.println(total + “ bytes”);
+in.close();
+}
+}
+```
