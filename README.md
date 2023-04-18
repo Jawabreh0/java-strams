@@ -23,7 +23,7 @@ This repository contains Java code examples that demonstrate how to work with st
  * Streams are classified into two basic types:
     - Input Stream
     - Output Stream 
-    -
+    
  ### Java Stream Classes
  * Input/Output related classes are defined in java.io package
  * Input/Output in Java is defined in terms of streams
@@ -39,14 +39,14 @@ This repository contains Java code examples that demonstrate how to work with st
  * File class is not for the contents of a file, but the file object
 
 ### Java.io.File methods
- getName()
- getPath()
- getAbsolutePath()
- getParent()
- isAbsolute()
- lastModified()
- IsFile()
- isDirectory()
- canRead()
- canWrite()
+ * getName()
+ * getPath()
+ * getAbsolutePath()
+ * getParent()
+ * isAbsolute()
+ * lastModified()
+ * IsFile()
+ * isDirectory()
+ * canRead()
+ * canWrite()
  
