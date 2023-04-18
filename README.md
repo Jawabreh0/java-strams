@@ -145,6 +145,8 @@ public class Main {
     - FileWriter
 * Remember, while opening a file, we can pass either file name or File object during the creation of objects of the above classes.
 
+### Reader Class (FileReader)
+
 ### Reader Class example
 Count total number of spaces in the file
 ```java
@@ -256,3 +258,4 @@ public class asString {
     }
 }
 ```
+### Writer Class (FileWriter)
