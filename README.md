@@ -184,7 +184,7 @@ public class Main {
   }
 }
 ```
-### Reader Class example
+#### Reader Class example
 Read File Content using FileReader (Reader Class)
 here there are two solutions, first by providing file as object, second by directly the file name as string
 
